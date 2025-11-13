@@ -108,3 +108,34 @@ footer {
     padding: 15px;
     margin-top: 20px;
 }
+
+@media (max-width: 768px) {
+    
+    /* Reverte o layout lado a lado para empilhado no mobile */
+    .content-item {
+        flex-direction: column; 
+        text-align: center;
+    }
+    
+    /* Garante que a imagem use mais espaço em telas pequenas, mas não 100% */
+    .content-item img {
+        max-width: 80%; 
+        order: -1; /* Força a imagem a vir antes do texto (opcional) */
+    }
+
+    /* Ajuste no título do header */
+    header h1 {
+        font-size: 2em;
+    }
+
+    /* Reduz o padding das seções para otimizar espaço */
+    .trimestre, .galeria-fotos {
+        padding: 20px;
+    }
+
+    /* Ajuste para a galeria: garante que as imagens sejam flexíveis */
+    .imagem-container img {
+        width: 100%; /* Imagens ocupam a largura total do container */
+        height: auto; 
+    }
+}
