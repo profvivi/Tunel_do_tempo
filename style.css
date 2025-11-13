@@ -1,0 +1,110 @@
+/* RESET BÁSICO */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    background-color: #1a237e; /* Azul Escuro */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin-top: 0;
+    font-size: 2.5em;
+}
+
+/* ESTILO GERAL DAS SEÇÕES */
+.trimestre {
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 1000px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.trimestre h2 {
+    color: #5e35b1; /* Roxo */
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* ORGANIZAÇÃO DO CONTEÚDO (Texto ao lado da Imagem) usando Flexbox */
+.content-item {
+    display: flex; /* Habilita o Flexbox */
+    align-items: center; /* Centraliza verticalmente os itens */
+    gap: 30px; /* Espaço entre os itens */
+    margin-top: 20px;
+}
+
+.content-item img {
+    max-width: 40%; /* Imagem ocupa 40% do espaço */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.content-item p {
+    flex-grow: 1; /* Parágrafo ocupa o espaço restante */
+    text-align: justify;
+}
+
+/* Alterna a ordem para o 2º Trimestre (imagem à esquerda, texto à direita) */
+#trimestre2 .content-item {
+    flex-direction: row-reverse;
+}
+
+/* GALERIA DE IMAGENS (4ª SECTION) */
+.galeria-fotos {
+    text-align: center;
+    background-color: #e8eaf6; /* Azul claro para destacar */
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin: 30px auto;
+    max-width: 1000px;
+}
+
+.galeria-fotos h2 {
+    color: #d84315; /* Laranja */
+    border-bottom: 2px solid #ccc;
+}
+
+.imagem-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as imagens quebrem a linha */
+    justify-content: center; /* Centraliza as imagens */
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.imagem-container img {
+    width: 300px; 
+    height: 200px; 
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    border: 5px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.imagem-container img:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+/* FOOTER */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
